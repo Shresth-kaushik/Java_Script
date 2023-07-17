@@ -114,4 +114,3 @@ let totalamt = carts.reduce((totalprice , currentprice) =>{
 } , 10000  ) // 10000  is the inital value 
 
 console.log(totalamt);
-
