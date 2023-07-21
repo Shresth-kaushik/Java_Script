@@ -10,7 +10,7 @@ for (const element of iterable) {
 // array-like objects => these objects have indexed elements and a length 
 // property, but they may not have all the array methods like push(), 
 // pop(), or forEach(). However, you can still access their elements 
-// using numeric indices.
+// using numeric indices .
 
 
 // array like object 
