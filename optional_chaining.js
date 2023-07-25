@@ -22,13 +22,48 @@ console.log(user?.address?.houseNo);
 
 
 // -------------------------------------------------------------------------------------
+
 // Function inside the object 
 const person ={
     fname : "Shresth",
     age: 21,
     about : function(){
         console.log(`Person's name is ${this.fname} and person's age is ${this.age} `)
-        // this 
+        // this is refering to the current object (during runtime).  
     }
 }
 person.about();
+
+console.log(this);
+
+
+
+// -----------------------------------------------------------------------------
+// methods
+// function inside object
+
+function personInfo(){
+    console.log(`person name is ${this.firstName} and age is ${this.age}`);
+}
+
+const person1 = {
+    firstName : "Deepanshu",
+    age: 8,
+    about: personInfo
+}
+
+const person2 = {
+    firstName : "nitin",
+    age: 18,
+    about: personInfo
+}
+
+const person3 = {
+    firstName : "aksh",
+    age: 17,
+    about: personInfo
+}
+
+person1.about();
+person2.about();
+person3.about();
