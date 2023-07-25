@@ -23,4 +23,26 @@ const person = {
   };
   
   person.greet.call(anotherPerson, "Hello"); // Output: Hello, I'm Alice 
-  
+
+//  ------------------------------------->> EXAMPLE  : 
+const user1 ={
+    firstname : "Ankit",
+    age : 5,
+    about : function(dost1 ,dost2){
+        console.log(this.firstname , this.age , dost1,dost2);
+    }
+} 
+
+const user2 ={
+    firstname : "Shresth",
+    age: 14
+}
+
+user1.about.call(user2); // here we pass the user2 as the current object ,
+// calling the about function of the user1 for the current object 2;
+
+
+user1.about.call(); // o/p will be  name-> undefined and age-> undefined 
+
+// we can also pass the other argument . 
+user1.about.call(user2,"aksh bhai","sahil mittr ");
