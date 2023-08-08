@@ -24,6 +24,8 @@ const person = {
   
   person.greet.call(anotherPerson, "Hello"); // Output: Hello, I'm Alice 
 
+
+  
 //  ------------------------------------->> EXAMPLE  : 
 const user1 ={
     firstname : "Ankit",
