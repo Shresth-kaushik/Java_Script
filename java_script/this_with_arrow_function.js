@@ -16,7 +16,7 @@ function regularFunction() {
   const obj = {
     method: regularFunction
   };
-  obj.method(); // 'this' refers to the 'obj' object
+  obj.method(); // 'this' refers to the 'obj' object  => current object .
   
   // Example 3: Using 'bind' to set the value of 'this'
   const boundFunction = regularFunction.bind({ name: 'Bound Object' });
@@ -43,6 +43,26 @@ const arrowFunction = () => {
   boundArrowFunction(); // 'this' still retains the value from the outer scope
   
 //   Keep in mind that arrow functions do not have their own this context and will
-//    always inherit the value of this from the enclosing (surrounding) scope. This
+//    always inherit the value of this from the enclosing (surrounding) scope / uper se . This
 //     makes them useful when you want to preserve the context of this without 
 //     worrying about changes due to different function call patterns.
+
+
+
+// ------- Mistake nahi karne hai ye vali --------
+
+const user1 = {
+  firstName : "harshit",
+  age: 8,
+  about: function(){
+      console.log(this.firstName, this.age);
+  }   
+}
+
+// don't do this mistake 
+
+// user1.about();
+const myFunc = user1.about.bind(user1);
+myFunc();
+
+
